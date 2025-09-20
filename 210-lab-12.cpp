@@ -31,8 +31,16 @@ int main() {
     for (double score : testScores) cout << score << " "; cout << endl << endl;
     cout << "Number of test scores: " << testScores.size() << endl << endl;
     cout << "Highest test score: " << *max_element(testScores.begin(), testScores.end()) << endl << endl;  
-    cout << "Highest test score: " << *min_element(testScores.begin(), testScores.end()) << endl << endl;  
+    cout << "Lowest test score: " << *min_element(testScores.begin(), testScores.end()) << endl << endl;  
+    cout << "Sum of test scores: " << accumulate(testScores.begin(), testScores.end(), 0.0) << endl << endl;
+    cout << "Average test score: " << (accumulate(testScores.begin(), testScores.end(), 0.0)/testScores.size()) << endl << endl;
 
+    sort(testScores.begin(), testScores.end()); 
+    cout << "Test scores sorted: ";
+    for (double score : testScores) cout << score << " "; cout << endl << endl;
+    sort(testScores.rbegin(), testScores.rend()); 
+    cout << "Test scores in reverse: "; 
+    for (double score : testScores) cout << score << " "; cout << endl << endl;
 
     inputFile.close();
     return 0;
