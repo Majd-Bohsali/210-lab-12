@@ -19,13 +19,20 @@ int main() {
         cerr << "Error in opening file"; 
     }
 
+    // reads file and adds data to array
     string line; 
     int i = 0; 
     while(getline(inputFile, line)) { 
-        cout << line << endl; 
         testScores[i] = stod(line);
         i++;
     }
+
+    cout << "Original Test Scores List: ";
+    for (double score : testScores) cout << score << " "; cout << endl << endl;
+    cout << "Number of test scores: " << testScores.size() << endl << endl;
+    cout << "Highest test score: " << *max_element(testScores.begin(), testScores.end()) << endl << endl;  
+    cout << "Highest test score: " << *min_element(testScores.begin(), testScores.end()) << endl << endl;  
+
 
     inputFile.close();
     return 0;
