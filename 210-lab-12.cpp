@@ -11,6 +11,8 @@
 using namespace std;
 
 int main() { 
+    const int SIZE = 30; 
+    array<double, SIZE> testScores; 
     ifstream inputFile("studentTestScores.txt"); 
     
     if(!inputFile.is_open()) { 
@@ -18,8 +20,11 @@ int main() {
     }
 
     string line; 
+    int i = 0; 
     while(getline(inputFile, line)) { 
         cout << line << endl; 
+        testScores[i] = stod(line);
+        i++;
     }
 
     inputFile.close();
