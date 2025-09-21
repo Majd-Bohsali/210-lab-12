@@ -34,6 +34,17 @@ int main() {
     cout << "Lowest test score: " << *min_element(testScores.begin(), testScores.end()) << endl << endl;  
     cout << "Sum of test scores: " << accumulate(testScores.begin(), testScores.end(), 0.0) << endl << endl;
     cout << "Average test score: " << (accumulate(testScores.begin(), testScores.end(), 0.0)/testScores.size()) << endl << endl;
+    cout << "Element at index 3: " << testScores.at(3) << endl << endl;
+
+    // makes a copy of the test scorse
+    array<double, SIZE> testScoresCopy = testScores; 
+    // sets all values to 90
+    testScoresCopy.fill(90);
+    // Pastes both arrays  
+    cout << "Original Test Scores List: ";
+    for (double score : testScores) cout << score << " "; cout << endl << endl;
+    cout << "Test Scores Copy List - with all values set to 90: ";
+    for (double score : testScoresCopy) cout << score << " "; cout << endl << endl; 
 
     sort(testScores.begin(), testScores.end()); 
     cout << "Test scores sorted: ";
@@ -41,6 +52,8 @@ int main() {
     sort(testScores.rbegin(), testScores.rend()); 
     cout << "Test scores in reverse: "; 
     for (double score : testScores) cout << score << " "; cout << endl << endl;
+
+    
 
     inputFile.close();
     return 0;
