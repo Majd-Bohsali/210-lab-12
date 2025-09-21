@@ -35,6 +35,8 @@ int main() {
     cout << "Sum of test scores: " << accumulate(testScores.begin(), testScores.end(), 0.0) << endl << endl;
     cout << "Average test score: " << (accumulate(testScores.begin(), testScores.end(), 0.0)/testScores.size()) << endl << endl;
     cout << "Element at index 3: " << testScores.at(3) << endl << endl;
+    cout << "Element at front: " << testScores.front() << endl << endl; 
+    cout << "Element at back: " << testScores.back() << endl << endl; 
 
     // makes a copy of the test scorse
     array<double, SIZE> testScoresCopy = testScores; 
