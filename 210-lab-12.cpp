@@ -55,6 +55,14 @@ int main() {
     cout << "Test scores in reverse: "; 
     for (double score : testScores) cout << score << " "; cout << endl << endl;
 
+    // swaps the two arrays 
+    testScoresCopy.swap(testScores);
+    cout << "Swapping original test scores and test scores copy (with all values set to 90)" << endl; 
+    cout << "Original Test Scores List: ";
+    for (double score : testScores) cout << score << " "; cout << endl;
+    cout << "Test Scores Copy List: ";
+    for (double score : testScoresCopy) cout << score << " "; cout << endl << endl;
+
     
 
     inputFile.close();
